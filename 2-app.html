@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>واجهة — تمرين تصميم كل يوم بالعربي</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <img src="logo.svg" alt="شعار واجهة" class="logo">
+    <span class="brand-name">واجهة</span>
+  </div>
+  <div class="date" id="today-date"></div>
+</header>
+
+<main>
+  <section class="card challenge">
+    <span class="pill" id="challenge-label">تمرين النهاردة</span>
+    <p class="challenge-text" id="challenge-text"></p>
+    <ul class="parts">
+      <li><span>العميل</span><b id="c-client"></b></li>
+      <li><span>المطلوب</span><b id="c-screen"></b></li>
+      <li><span>الجمهور</span><b id="c-audience"></b></li>
+      <li><span>القيد</span><b id="c-constraint"></b></li>
+    </ul>
+    <div class="actions">
+      <button id="shuffle-btn" class="btn ghost" type="button">تمرين إضافي</button>
+      <button id="done-btn" class="btn primary" type="button">خلصت تمرين النهاردة</button>
+    </div>
+  </section>
+
+  <section class="card streak">
+    <div class="streak-num"><span id="streak-count">0</span></div>
+    <div>
+      <h2>سلسلة الأيام</h2>
+      <p>كل يوم بتخلص فيه التمرين بيزيد السلسلة. افتح واجهة كل يوم وحافظ عليها.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>قاموس المصطلحات</h2>
+    <p class="muted">أهم مصطلحات الـ UI/UX بالإنجليزي ومعناها بالعربي.</p>
+    <input id="glossary-search" type="search" placeholder="دوّر على مصطلح… مثل wireframe" aria-label="بحث في المصطلحات">
+    <div class="g-head"><span id="glossary-count"></span></div>
+    <div id="glossary-list"></div>
+  </section>
+</main>
+
+<footer>واجهة — نموذج أولي. بياناتك بتتحفظ على جهازك بس.</footer>
+
+<script src="data.js"></script>
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

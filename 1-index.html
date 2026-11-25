@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>واجهة — تمرين تصميم كل يوم بالعربي</title>
+<style>
+:root { --bg:#0f1226; --card:#1a1f3d; --text:#f4f5ff; --muted:#a6abc9; --accent:#f5a623; --accent2:#6c63ff; }
+* { box-sizing: border-box; }
+body { margin:0; font-family:'Noto Sans Arabic','Segoe UI',Tahoma,sans-serif; background:var(--bg); color:var(--text); }
+.hero {
+  min-height: 92vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:40px 20px;
+  background: radial-gradient(900px 500px at 50% -10%, #232a52 0%, var(--bg) 60%);
+}
+.hero img { width:88px; height:88px; }
+.hero h1 { font-size:44px; margin:18px 0 8px; }
+.hero h1 span { color:var(--accent); }
+.hero p.tag { font-size:20px; color:var(--muted); max-width:560px; line-height:1.9; }
+.cta {
+  display:inline-block; margin-top:28px; background:var(--accent); color:#20180a;
+  font-weight:800; font-size:18px; padding:16px 42px; border-radius:14px; text-decoration:none;
+}
+.cta:hover { filter:brightness(1.1); }
+.note { margin-top:14px; color:var(--muted); font-size:14px; }
+section { max-width:880px; margin:0 auto; padding:56px 20px; }
+h2 { font-size:30px; margin:0 0 10px; }
+.sub { color:var(--muted); margin:0 0 30px; font-size:17px; line-height:1.9; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+.feat { background:var(--card); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:22px; }
+.feat h3 { margin:0 0 8px; font-size:18px; color:var(--accent); }
+.feat p { margin:0; color:var(--muted); line-height:1.9; font-size:15px; }
+.steps { counter-reset:s; display:grid; gap:14px; }
+.step { display:flex; gap:16px; align-items:flex-start; background:var(--card); border-radius:14px; padding:18px; }
+.step::before {
+  counter-increment:s; content:counter(s); min-width:40px; height:40px; border-radius:50%;
+  background:var(--accent2); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center;
+}
+.step p { margin:0; line-height:1.9; }
+.compare { width:100%; border-collapse:collapse; margin-top:10px; }
+.compare th,.compare td { padding:14px; text-align:right; border-bottom:1px solid rgba(255,255,255,0.08); }
+.compare th { color:var(--accent); }
+.compare td { color:var(--muted); }
+.compare td:first-child, .compare th:first-child { color:var(--text); font-weight:700; }
+.final { text-align:center; padding:70px 20px; }
+.final h2 { font-size:34px; }
+footer { text-align:center; color:var(--muted); font-size:13px; padding:26px; border-top:1px solid rgba(255,255,255,0.07); }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="logo.svg" alt="شعار واجهة">
+  <h1>واجهة<span>.</span></h1>
+  <p class="tag">تمرين تصميم UI/UX كل يوم، بالعربي. من غير كورسات طويلة ولا محتوى مترجم: افتح، خد تمرينك، وصمم.</p>
+  <a class="cta" href="app.html">جرّب تمرين النهاردة</a>
+  <div class="note">مجاني · من غير تسجيل · بيشتغل من المتصفح</div>
+</div>
+
+<section>
+  <h2>المشكلة</h2>
+  <p class="sub">المصمم العربي المبتدئ بيتعلم من كورسات إنجليزي أو مترجمة، وتمارين التصميم اليومية المعروفة (زي Daily UI وSharpen) كلها بالإنجليزي وبأمثلة بعيدة عن سوقنا. النتيجة: بيتفرج أكتر ما بيصمم.</p>
+  <div class="grid">
+    <div class="feat"><h3>المحتوى إنجليزي</h3><p>أشهر أدوات التمرين اليومي إنجليزية 100%، وده حاجز لناس كتير بتبدأ.</p></div>
+    <div class="feat"><h3>أمثلة بعيدة عن واقعنا</h3><p>مشاريع تدريب عن شركات أجنبية، مش مقهى في حارتك ولا عيادة في مصر.</p></div>
+    <div class="feat"><h3>المشاهدة ≠ الممارسة</h3><p>ساعات الكورسات بتتحسبش جنب يوم واحد بتصمم فيه بإيدك.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>إزاي بيشتغل؟</h2>
+  <div class="steps">
+    <div class="step"><p>افتح واجهة كل يوم، هتلاقي تمرين جديد: عميل + شاشة + جمهور + قيد تصميم.</p></div>
+    <div class="step"><p>صمم الحل في أي أداة بتحبها (Figma أو ورقة وقلم).</p></div>
+    <div class="step"><p>علّم التمرين "خلص" وحافظ على سلسلة الأيام، واستخدم قاموس المصطلحات لما تلاقي كلمة جديدة.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>ليه واجهة مختلفة؟</h2>
+  <table class="compare">
+    <tr><th></th><th>واجهة</th><th>Daily UI</th><th>Sharpen</th></tr>
+    <tr><td>بالعربي</td><td>✓</td><td>✗</td><td>✗</td></tr>
+    <tr><td>أمثلة من السوق العربي</td><td>✓</td><td>✗</td><td>✗</td></tr>
+    <tr><td>قاموس مصطلحات عربي/إنجليزي</td><td>✓</td><td>✗</td><td>✗</td></tr>
+    <tr><td>تمرين يومي ثابت للكل</td><td>✓</td><td>✓ (إيميل)</td><td>عشوائي بس</td></tr>
+    <tr><td>مجاني ومن غير تسجيل</td><td>✓</td><td>✓</td><td>✓</td></tr>
+  </table>
+</section>
+
+<div class="final">
+  <h2>ابدأ النهاردة</h2>
+  <p class="sub">تمرين واحد في اليوم. 30 يوم = 30 تصميم في البورتفوليو بتاعك.</p>
+  <a class="cta" href="app.html">افتح النموذج الأولي</a>
+</div>
+
+<footer>واجهة — نموذج أولي (MVP) لاختبار الفكرة. غير منشور للعامة حاليًا.</footer>
+
+</body>
+</html>
